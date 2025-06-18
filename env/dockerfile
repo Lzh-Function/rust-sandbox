@@ -1,0 +1,17 @@
+FROM rust:latest
+
+# C++ comparrison
+RUN apt-get update && \
+    apt-get install -y \
+    git \
+    pkg-config \
+    gcc \
+    gdb \
+    g++ \
+    clang \
+    nano \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace
+
+CMD ["/bin/bash"]

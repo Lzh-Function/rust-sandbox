@@ -1,0 +1,11 @@
+services:
+  Rust:
+    build: .
+    image: rust
+    container_name: rust
+    volumes:
+      - /dev/shm:/dev/shm
+      - ~/workspace:/workspace
+    ports:
+      - "80:80"
+    tty: true
